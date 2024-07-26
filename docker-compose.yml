@@ -53,17 +53,7 @@ services:
       - db
     networks:
       - app-network
-  
-  docs:
-    build:
-      context: .
-      dockerfile: ./apps/docs/Dockerfile
-    container_name: nextjs-docs
-    ports:
-      - "3001:3001"
-    networks:
-      - app-network
-
+      
   nginx:
     image: nginx:latest
     container_name: nginx
